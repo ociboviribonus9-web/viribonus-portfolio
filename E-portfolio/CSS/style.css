@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:#e2e8f0;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:rgba(15,23,42,0.9);
+    padding: 15px 30px;
+    backdrop-filter:blur(10px);
+    border-bottom:2px solid #38bdf8;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color:#e2e8f0;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight:500;
+    transition:0.3s ease;
+}
+
+nav ul li a:hover {
+    color:#38bdf8;
+    transform:scale(1.1);
+}
+
+/* MOBILE MENU */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* SECTIONS */
+.section {
+    padding: 40px;
+    text-align: center;
+}
+
+.profile {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.grid img, video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+    background: cyan;
+    border: none;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+#home {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Profile */
+.profile {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+/* Cards container */
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Card */
+.info-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+/* Hover */
+.info-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Title */
+.info-card h3 {
+  color: #00d4ff;
+  margin-bottom: 10px;
+}
+
+/* Text */
+.info-card p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Make bio bigger */
+.bio-card {
+  grid-column: span 2;
+}
+.unit-card {
+    background: #1e1e2e;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+}
+
+.assessment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #333;
+}
+
+.assessment-item:last-child {
+    border-bottom: none;
+}
+
+.pdf-name {
+    font-weight: 500;
+    color: #ddd;
+}
+
+.pdf-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-view, .btn-download {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-view {
+    background: #4a90e2;
+    color: white;
+}
+
+.btn-view:hover {
+    background: #357abd;
+}
+
+.btn-download {
+    background: #27ae60;
+    color: white;
+}
+
+.btn-download:hover {
+    background: #219653;
+}
